@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/15/2022 3:23:55 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LA29688"
+  DTS:CreatorName="UBHT_NT\ChiltonMic"
+  DTS:DTSID="{ECB13931-CB4E-494D-A679-376D3DBBC648}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{A32DBF3A-3239-43A8-8FCD-A9E2207A4695}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>

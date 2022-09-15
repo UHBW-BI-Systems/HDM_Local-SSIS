@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "HDM_Local-SSIS", "HDM_Local-SSIS\HDM_Local-SSIS.dtproj", "{DFF6F610-6B04-482D-8963-D02407B98843}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFF6F610-6B04-482D-8963-D02407B98843}.Development|Default.ActiveCfg = Development
+		{DFF6F610-6B04-482D-8963-D02407B98843}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E4473A3-8DF2-4C25-8389-C1A844DDA7B1}
+	EndGlobalSection
+EndGlobal
