@@ -1,0 +1,953 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/4/2022 10:16:59 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LA29688"
+  DTS:CreatorName="UBHT_NT\ChiltonMic"
+  DTS:DTSID="{6FCF6E23-612B-4D79-BF93-A8DB09F8F3E2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="HV Antenatal Reporting WinSCP"
+  DTS:PackageType="5"
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{014FCD4F-19F0-4952-BB9D-02A6171FBBAB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HV Report]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{531E9FE1-F351-487E-A809-4D7B86BF5734}"
+      DTS:ObjectName="HV Report">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::FileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="x">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LocalPatientID"
+              DTS:DTSID="{6C0E29A0-7518-49E9-A20C-4B0DC03928C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NHSNumber"
+              DTS:DTSID="{9693C4CB-00AB-401B-B3D5-97D3CF5251C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Postcode"
+              DTS:DTSID="{0435FF53-47F7-477D-B054-0D4DDD541382}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Local_Authority_Code"
+              DTS:DTSID="{4A8F4CEA-07DF-4C17-BC86-BB9B82F03569}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BookingDate"
+              DTS:DTSID="{3B84F9A8-3706-4146-B914-2A8959E2A705}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrentGestation"
+              DTS:DTSID="{05A7155E-CCB5-42C5-B1F8-FAB1F696976A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GpPracticeCode"
+              DTS:DTSID="{1DCC4310-35D0-457D-8948-DC8A7D79AF55}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AntenatalCareTeam"
+              DTS:DTSID="{F222646F-FAF0-4290-8A1A-864AB43E7C56}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="80"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NamedMidwife"
+              DTS:DTSID="{1BF14FCC-3DD9-4362-AF39-12AF2261650A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EDD"
+              DTS:DTSID="{22B30BEA-387B-49D0-89A7-FD45F34EA63B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="26WeekDate"
+              DTS:DTSID="{39BFC6EB-5065-45E5-9891-09F0015E2B06}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[medwaybi\hdmsql.HDM_Local]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B8712477-45F7-4F80-892E-E2D273ECB601}"
+      DTS:ObjectName="medwaybi\hdmsql.HDM_Local">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=medwaybi\hdmsql;Initial Catalog=HDM_Local;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{79A0B874-E141-4EA4-AF12-40F2D2E0A189}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8">x</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FA832136-8FD0-415B-94CF-AFF502D6A16D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileNameArchive">
+      <DTS:VariableValue
+        DTS:DataType="8">\\ubht.nhs.uk\shares\BI\Dataload\Sirona Antenatal\Archive\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1654FC4B-3F40-4AC1-B97A-8A705BC3ECC6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileTemp">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Temp\HV</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Archive Files"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{A9CDF0FD-EF8A-4CE8-93E2-6E05967C499C}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Archive Files"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="MoveFile"
+          TaskOverwriteDestFile="True"
+          TaskSourcePath="User::FileName"
+          TaskIsSourceVariable="True"
+          TaskDestinationPath="User::FileNameArchive"
+          TaskIsDestinationVariable="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Copy Data from HDM_Local to Dataload"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{46BBCDD4-8B22-40A8-B083-3253B796A7FA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Copy Data from HDM_Local to Dataload"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="2057"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[HV Report]"
+                  connectionManagerRefId="Package.ConnectionManagers[HV Report]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[LocalPatientID]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="LocalPatientID"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LocalPatientID]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[LocalPatientID]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[NHSNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="NHSNumber"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NHSNumber]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[NHSNumber]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[Postcode]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Postcode"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Postcode]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[Postcode]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[Local_Authority_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Local_Authority_Code"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Local_Authority_Code]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[Local_Authority_Code]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[BookingDate]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="BookingDate"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BookingDate]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[BookingDate]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[CurrentGestation]"
+                      cachedDataType="i4"
+                      cachedName="CurrentGestation"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrentGestation]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrentGestation]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[GpPracticeCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="GpPracticeCode"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GpPracticeCode]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[GpPracticeCode]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[AntenatalCareTeam]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="AntenatalCareTeam"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AntenatalCareTeam]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[AntenatalCareTeam]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[NamedMidwife]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="NamedMidwife"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NamedMidwife]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[NamedMidwife]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[EDD]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="EDD"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EDD]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[EDD]" />
+                    <inputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].Columns[26WeekDate]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="26WeekDate"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[26WeekDate]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[26WeekDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LocalPatientID]"
+                      dataType="wstr"
+                      length="30"
+                      name="LocalPatientID" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NHSNumber]"
+                      dataType="wstr"
+                      length="12"
+                      name="NHSNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Postcode]"
+                      dataType="wstr"
+                      length="8"
+                      name="Postcode" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Local_Authority_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Local_Authority_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BookingDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BookingDate" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrentGestation]"
+                      dataType="i4"
+                      name="CurrentGestation" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GpPracticeCode]"
+                      dataType="wstr"
+                      length="50"
+                      name="GpPracticeCode" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AntenatalCareTeam]"
+                      dataType="wstr"
+                      length="60"
+                      name="AntenatalCareTeam" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NamedMidwife]"
+                      dataType="wstr"
+                      length="80"
+                      name="NamedMidwife" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EDD]"
+                      dataType="date"
+                      name="EDD" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[26WeekDate]"
+                      dataType="date"
+                      name="26WeekDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">exec dbo.Sirona_Antenatal</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[medwaybi\hdmsql.HDM_Local]"
+                  connectionManagerRefId="Package.ConnectionManagers[medwaybi\hdmsql.HDM_Local]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[LocalPatientID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LocalPatientID]"
+                      length="30"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[LocalPatientID]"
+                      name="LocalPatientID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[NHSNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NHSNumber]"
+                      length="12"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[NHSNumber]"
+                      name="NHSNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[Postcode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Postcode]"
+                      length="8"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[Postcode]"
+                      name="Postcode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[Local_Authority_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_Code]"
+                      length="1"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[Local_Authority_Code]"
+                      name="Local_Authority_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[BookingDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BookingDate]"
+                      length="4000"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[BookingDate]"
+                      name="BookingDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrentGestation]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrentGestation]"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrentGestation]"
+                      name="CurrentGestation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[GpPracticeCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GpPracticeCode]"
+                      length="50"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[GpPracticeCode]"
+                      name="GpPracticeCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[AntenatalCareTeam]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AntenatalCareTeam]"
+                      length="60"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[AntenatalCareTeam]"
+                      name="AntenatalCareTeam"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[NamedMidwife]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NamedMidwife]"
+                      length="80"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[NamedMidwife]"
+                      name="NamedMidwife"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[EDD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EDD]"
+                      length="4000"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[EDD]"
+                      name="EDD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[26WeekDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[26WeekDate]"
+                      length="4000"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].Columns[26WeekDate]"
+                      name="26WeekDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LocalPatientID]"
+                      dataType="wstr"
+                      length="30"
+                      name="LocalPatientID" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NHSNumber]"
+                      dataType="wstr"
+                      length="12"
+                      name="NHSNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Postcode]"
+                      dataType="wstr"
+                      length="8"
+                      name="Postcode" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Local_Authority_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BookingDate]"
+                      dataType="wstr"
+                      length="4000"
+                      name="BookingDate" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrentGestation]"
+                      dataType="i4"
+                      name="CurrentGestation" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GpPracticeCode]"
+                      dataType="wstr"
+                      length="50"
+                      name="GpPracticeCode" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AntenatalCareTeam]"
+                      dataType="wstr"
+                      length="60"
+                      name="AntenatalCareTeam" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NamedMidwife]"
+                      dataType="wstr"
+                      length="80"
+                      name="NamedMidwife" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EDD]"
+                      dataType="wstr"
+                      length="4000"
+                      name="EDD" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[26WeekDate]"
+                      dataType="wstr"
+                      length="4000"
+                      name="26WeekDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LocalPatientID]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LocalPatientID]"
+                      name="LocalPatientID" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NHSNumber]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NHSNumber]"
+                      name="NHSNumber" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Postcode]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Postcode]"
+                      name="Postcode" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Local_Authority_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Local_Authority_Code]"
+                      name="Local_Authority_Code" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BookingDate]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BookingDate]"
+                      name="BookingDate" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrentGestation]"
+                      dataType="i4"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrentGestation]"
+                      name="CurrentGestation" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GpPracticeCode]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GpPracticeCode]"
+                      name="GpPracticeCode" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AntenatalCareTeam]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AntenatalCareTeam]"
+                      name="AntenatalCareTeam" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NamedMidwife]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NamedMidwife]"
+                      name="NamedMidwife" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EDD]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EDD]"
+                      name="EDD" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[26WeekDate]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[26WeekDate]"
+                      name="26WeekDate" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Copy Data from HDM_Local to Dataload.Paths[OLE DB Source Output]"
+              endId="Package\Copy Data from HDM_Local to Dataload\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Copy Data from HDM_Local to Dataload\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{F48106B2-09BF-4C12-9CF5-2882468D5BCA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{B8712477-45F7-4F80-892E-E2D273ECB601}"
+          SQLTask:SqlStatementSource="DECLARE @file_name VARCHAR(72)&#xA;&#xA;SELECT @file_name = &#xA;&#x9;'\\ubht.nhs.uk\shares\BI\Dataload\Sirona Antenatal\hv_report_' + &#xA;&#x9;CONVERT(varchar, getdate(), 112) &#xA;&#x9;--+ REPLACE(CONVERT(varchar, getdate(), 8),':','') &#xA;&#x9;+ '.csv'&#xA;&#xA;SELECT &#xA;@file_name as file_name"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="file_name"
+            SQLTask:DtsVariableName="User::FileName" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\File System Task"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{06BCA20A-0F15-439D-AFA1-390C300FC933}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File System Task"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOverwriteDestFile="True"
+          TaskSourcePath="User::FileName"
+          TaskIsSourceVariable="True"
+          TaskDestinationPath="User::FileTemp"
+          TaskIsDestinationVariable="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\sFTP Data to Sirona"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{04F7DFFF-1EA4-4B7D-880B-2F3E51E07053}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="sFTP Data to Sirona"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Program Files (x86)\WinSCP\WinSCP.exe"
+          Arguments="/log=&quot;C:\Temp\hv_log.txt&quot; /script=&quot;\\ubht.nhs.uk\shares\BI\PHDAdmin\ServiceDesk_tickets\SD854030 Fortnightly HV Antenatal Reporting\parameters.ini&quot;"
+          WorkingDirectory="\\ubht.nhs.uk\shares\BI\Dataload\Sirona Antenatal" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{2BA96E85-6EF4-4A0E-A2B6-F889078F27DA}"
+      DTS:From="Package\Copy Data from HDM_Local to Dataload"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\sFTP Data to Sirona" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{0AA85093-7155-4670-B535-41FA91388419}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Copy Data from HDM_Local to Dataload" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{00FF2B11-C25C-4A6E-AAC5-04559D9A7226}"
+      DTS:From="Package\sFTP Data to Sirona"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Archive Files" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Archive Files"
+          TopLeft="97.5000015667507,221.452944205129" />
+        <NodeLayout
+          Size="266.4,41.6"
+          Id="Package\Copy Data from HDM_Local to Dataload"
+          TopLeft="32.9285718956773,69.1235303040607" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="84.9285707376441,4.98235125096198" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\sFTP Data to Sirona"
+          TopLeft="81.2142854710021,143.217647728046" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="166.128571316661,46.582351250962">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.5411790530987"
+              Start="0,0"
+              End="0,15.0411790530987">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0411790530987" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="166.557143518876,184.817647728046">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.6352964770826"
+              Start="0,0"
+              End="0,29.1352964770826">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.1352964770826" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\File System Task"
+          TopLeft="293.785718684294,151.853614886779" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="166.67142868334,110.723530304061">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.4941174239857"
+              Start="0,0"
+              End="0,24.9941174239857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9941174239857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Copy Data from HDM_Local to Dataload">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Copy Data from HDM_Local to Dataload\OLE DB Source"
+          TopLeft="35.5,35.5" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Copy Data from HDM_Local to Dataload\Flat File Destination"
+          TopLeft="31.2142841086095,112.041176281833" />
+        <EdgeLayout
+          Id="Package\Copy Data from HDM_Local to Dataload.Paths[OLE DB Source Output]"
+          TopLeft="113.557142054305,77.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.9411762818334"
+              Start="0,0"
+              End="0,27.4411762818334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.4411762818334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Copy Data from HDM_Local to Dataload\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
